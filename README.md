@@ -60,6 +60,9 @@ php artisan make:factory ProductFactory --model=Product
 
 # Luego de editar los factory y el seeder realizamos ejecutamos el seed
 php artisan db:seed
+
+# Agregar componente livewire para detalles de productos
+php artisan make:livewire DetailsComponent
 ```
 
 ## Agregar el handle de autenticación a los roles

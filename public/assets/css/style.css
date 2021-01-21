@@ -7163,24 +7163,24 @@ background-color: #888888;
     color:red;
 }
 
-.pl-4, .px-4{
+.pl-4, .px-4 {
     padding-left: 1.5rem !important;
 }
 
-.pb-2, .py-2{
+.pb-2, .py-2 {
     padding-bottom: .5rem !important;
 }
 
-.pt-2, .py-4{
+.pt-2, .py-4 {
     padding-top: .5rem !important;
 }
 
-.bg-white{
+.bg-white {
     background-color: #fff !important;
 }
 
 .border {
-    border: 1px solid #dee2e6 !important;
+    border: 1px solid #dee2e6;
 }
 
 nav svg {

@@ -5,6 +5,7 @@ use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\ContactUsComponent;
+use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\PrivacyPolicyComponent;
 use App\Http\Livewire\ReturnPolicyComponent;
@@ -37,6 +38,8 @@ Route::get('/shop', ShopComponent::class);
 Route::get('/cart', CartComponent::class);
 
 Route::get('/checkout', CheckoutComponent::class);
+
+Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
 
 Route::get('/contact-us', ContactUsComponent::class);
 
