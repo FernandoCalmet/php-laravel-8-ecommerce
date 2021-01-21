@@ -21,6 +21,61 @@ php artisan make:livewire ContactUsComponent
 php artisan make:livewire PrivacyPolicyComponent
 php artisan make:livewire TermsConditionsComponent
 php artisan make:livewire ReturnPolicyComponent
+
+# Agregar Jetstream a las dependencias
+composer require laravel/Jetstream
+
+# Instalar Jetstream
+php artisan jetstream:install livewire
+
+# Ejecutar migraciones
+php artisan migrate
+
+# Mix Manifest File
+npm install
+npm run dev
+
+# Instalar tailwindcss para las paginas de login y registro
+npm install tailwindcss
+npx tailwindcss init
+npm run dev
+
+# Crear middleware para administrador
+php artisan make:middleware AuthAdmin
+
+# Agregar componentes de livewire para el dashboard de los roles
+php artisan make:livewire admin/AdminDashboardComponent
+php artisan make:livewire user/UserDashboardComponent
+```
+
+## Agregar el handle de autenticación a los roles
+
+> Editar el archivo 'vendor/laravel/fortify/src/Actions/AttempToAuthenticate.php'
+
+```php
+public function handle($request, $next)
+{
+    if (Fortify::$authenticateUsingCallback) {
+        return $this->handleUsingCustomCallback($request, $next);
+    }
+
+    if ($this->guard->attempt(
+        $request->only(Fortify::username(), 'password'),
+        $request->filled('remember'))
+    ) {
+        if(Auth::user()->utype === 'ADM'){
+            session(['utype'=>'ADM']);
+            return redirect(RouteServiceProvider::HOME);
+        }
+        else if(Auth::user()->utype === 'USR'){
+            session(['utype'=>'USR']);
+            return redirect(RouteServiceProvider::HOME);
+        }
+        return $next($request);
+    }
+
+    $this->throwFailedAuthenticationException($request);
+}
 ```
 
 ---

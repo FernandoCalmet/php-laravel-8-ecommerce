@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\AboutUsComponent;
+use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\ContactUsComponent;
@@ -9,6 +10,7 @@ use App\Http\Livewire\PrivacyPolicyComponent;
 use App\Http\Livewire\ReturnPolicyComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\TermsConditionsComponent;
+use App\Http\Livewire\User\UserDashboardComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,3 +47,20 @@ Route::get('/privacy-policy', PrivacyPolicyComponent::class);
 Route::get('/return-policy', ReturnPolicyComponent::class);
 
 Route::get('/terms-conditions', TermsConditionsComponent::class);
+
+/*
+// Dashboard igual para todos los tipos de usuario
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+*/
+
+// Dashboard particular para usuarios o clientes
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+});
+
+// Dashboard particular para administradores
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+});
