@@ -2,7 +2,7 @@
 
 Aprendizaje de Laravel 8 empezando desde lo básico a conceptos avanzados con ejemplos.
 
-## Comandos
+## Comandos utilizados
 
 ```bash
 # Crear proyecto
@@ -46,6 +46,20 @@ php artisan make:middleware AuthAdmin
 # Agregar componentes de livewire para el dashboard de los roles
 php artisan make:livewire admin/AdminDashboardComponent
 php artisan make:livewire user/UserDashboardComponent
+
+# Agregar modelos
+php artisan make:model Category -m
+php artisan make:model Product -m
+
+# Ejecutar migraciones luego de editar los modelos
+php artisan migrate
+
+# Crear factory para los modelos creados
+php artisan make:factory CategoryFactory --model=Category
+php artisan make:factory ProductFactory --model=Product
+
+# Luego de editar los factory y el seeder realizamos ejecutamos el seed
+php artisan db:seed
 ```
 
 ## Agregar el handle de autenticación a los roles
