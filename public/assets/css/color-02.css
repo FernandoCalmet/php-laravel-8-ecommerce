@@ -1,0 +1,126 @@
+.product-style-1 .product-info .product-name:hover,
+.wrap-vertical-nav li a:hover,
+.header-nav-section li>a:hover,
+.topbar-menu-area .topbar-menu ul li a:hover,
+.product-style-2 .product-info .product-name:hover span,
+.product .product-info .product-name:hover span,
+.back-link-box  .list-back-link li a:hover,
+.coppy-right-box .coppy-right-text a:hover,
+.wrap-nav.horizontal-nav .link-term:hover,
+.change-display-mode .display-mode:hover i::before,
+.change-display-mode .display-mode.active i::before,
+.ui-slider+p button:hover,
+.vertical-list li a.active,
+.center-section .wrap-search-form,
+.wrap-login-item .form-item input[type="checkbox"] + span::after,
+.post-footer .post-tags ul li,
+.wrap-iten-in-cart .products-cart .product-name a:hover,
+.summary .checkout-info .link-to-shop:hover,
+.wrap-product-detail .detail-info .quantity-input input[type=text],
+.widget-our-services .service a>i,
+.wrap-breadcrumb ul a:hover,
+.product-style-1 .product-info .wrap-btn a,
+.wrap-list-cate .list-cate li:not(.level-0):hover{
+    color: #365db5;
+}
+
+.widget a:hover,
+.product-list-style .advance-info .wrap-btn .btn:hover,
+.product-list-style .advance-info .wrap-btn .btn:hover::before,
+.product .product-info .product-rating .count-review:hover,
+.product-list-style .advance-info .stock-info.in-stock p b,
+.wrap-login-item .form-item .link-function:hover,
+.wrap-articles article .info .post-attrs li a:hover,
+.wrap-articles article .info .post-name:hover .art-title,
+.wrap-articles article .info .post-attrs li a.link-commnet-post:hover::before,
+.widget.search-post button[type=submit]:hover i,
+.wrap-product-detail .detail-info .wrap-btn .btn:hover,
+.wrap-product-detail .detail-info .wrap-btn .btn:hover::before,
+.header-toggle .primary>.menu-item.sale-panel>a:hover,
+.widget.filter-widget .vertical-list li a::after
+{
+    color: #365db5 !important;
+}
+
+.product-style-1 .product-info .wrap-btn a::after,
+.primary .menu-item.home-icon,
+.center-section .wrap-search-form button,
+.wrap-banner .banner-link,
+.wrap-main-slide .slide-1 .btn-link,
+.wrap-main-slide .slide-3 .btn-link,
+.product-style-2 .product-thumnail .wrap-btn .function-link:hover,
+.wrap-footer-content .wrap-function-info,
+.wrap-newletter-footer .btn-submit,
+.wrap-footer-item .social-network ul li a:hover,
+.product-style-3 a.add-to-cart:hover,
+.widget.filter-widget .inline-round li a:hover,
+.widget.filter-widget .inline-round li a.active,
+.wrap-login-item .form-item .btn,
+.wrap-contacts .contact-box input[type="submit"],
+.wrap-icon-box .icon-box-item i,
+.aboutus-info.style-small-left .list-showups label input[type="radio"]:checked + span.check-box,
+.wrap-pagination-info .page-numbers li .page-number-item.current,
+.wrap-articles article .info a.btn-to-post:hover,
+.checkout-info .btn-checkout,
+.post-footer .comment-form fieldset.input-field input[type=submit],
+.wrap-product-detail .advance-info .tab-control a.active,
+#review_form_wrapper #review_form .comment-form p.form-submit input[type=submit],
+.wrap-product-detail .detail-info .wrap-butons .add-to-cart:hover,
+.wrap-product-detail .detail-info .quantity-input .btn:hover,
+.summary-item .btn,
+.choose-payment-methods .payment-method input[type=radio]:checked + span::before,
+.header-toggle .wrap-toggle-menu,
+.header-toggle .primary>.menu-item:not(.sale-panel):hover,
+.header-toggle .primary .submenu .menu-item:hover,
+.wrap-main-slide-2 .wrap-banners .btn,
+.wrap-show-advance-info-box .title-box,
+.wrap-product-tab.vertical-type .tab-control a::before,
+.main-info-area .right-section .wrap-icon-section.minicart .index{
+    background: #365db5;
+}
+.has-child-cate .toggle-control:hover::after,
+.has-child-cate .toggle-control:hover::before,
+.widget.filter-widget .vertical-list li a.btn-control:hover::before,
+.product-list-style .advance-info .add-to-cart:hover,
+.detail-media .flex-control-nav .owl-nav button:hover,
+.wrap-iten-in-cart .products-cart .quantity .quantity-input .btn:hover,
+.wrap-pagination-info .page-numbers li .page-number-item:hover{
+    background: #365db5 !important;
+}
+.flex-control-thumbs img.flex-active,
+.wrap-product-detail .advance-info .tab-control a.active,
+.wrap-product-detail .detail-info .quantity-input .btn:hover,
+.wrap-product-detail .detail-info .wrap-butons .add-to-cart:hover,
+.product-widget-style .thumbnnail a:hover img,
+.choose-payment-methods .payment-method input[type=radio]:checked + span::before,
+.header-toggle .primary>.menu-item:not(.sale-panel):hover,
+.header-toggle .primary .submenu .menu-item:hover,
+.header-toggle .nav-section,
+.product-style-2:hover,
+.wrap-demo-item-1:hover img,
+.center-section .wrap-search-form{
+    border-color: #365db5;
+}
+.widget.widget-tag-clouds ul li a:hover,
+.product-list-style .advance-info .add-to-cart:hover,
+.product-style-3 a.add-to-cart:hover,
+.widget.filter-widget .inline-round li a:hover,
+.widget.filter-widget .inline-round li a.active,
+.wrap-pagination-info .page-numbers li .page-number-item.current,
+.wrap-pagination-info .page-numbers li .page-number-item:hover,
+.aboutus-info.style-small-left .list-showups label input[type="radio"]:checked + span.check-box,
+.wrap-articles article .info a.btn-to-post:hover
+{
+    border-color: #365db5 !important;
+}
+.wrap-footer-content .wrap-function-info .fc-info-item
+{
+    border-color: #5372b9 !important;
+}
+.wrap-footer-content .wrap-function-info .fc-info-item .wrap-left-info .fc-desc{
+    color: #869fd7 !important;
+}
+/*default hover color*/
+.wrap-main-slide-2 .wrap-banners .btn:hover{
+    background-color: #4c5776;
+}
