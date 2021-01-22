@@ -71,6 +71,10 @@ php artisan vendor:publish --provider="Gloudeman\ShoppingcartServiceProvider" --
 
 # Crear componente livewire para categorias de productos
 php artisan make:livewire CategoryComponent
+
+# Crear componente livewire para busquedas
+php artisan make:livewire HeaderSearchComponent
+php artisan make:livewire SearchComponent
 ```
 
 ## Agregar el handle de autenticación a los roles
