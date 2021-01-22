@@ -68,6 +68,9 @@ php artisan make:livewire DetailsComponent
 composer require hardevine/shoppingcart
 # Luego de actualizar el config de app con el carrito de Gloudeman
 php artisan vendor:publish --provider="Gloudeman\ShoppingcartServiceProvider" --tag="config"
+
+# Crear componente livewire para categorias de productos
+php artisan make:livewire CategoryComponent
 ```
 
 ## Agregar el handle de autenticación a los roles

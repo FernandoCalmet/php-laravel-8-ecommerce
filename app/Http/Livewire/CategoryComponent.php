@@ -8,41 +8,48 @@ use Livewire\WithPagination;
 use Cart;
 use App\Models\Category;
 
-class ShopComponent extends Component
+class CategoryComponent extends Component
 {
     public $sorting;
     public $pagesize;
+    public $category_slug;
 
-    public function mount()
+    public function mount($category_slug)
     {
         $this->sorting = "default";
         $this->pagesize = 12;
+        $this->category_slug = $category_slug;
     }
     
-    use WithPagination;    
+    use WithPagination;
     public function render()
     {
+        $category = Category::where('slug', $this->category_slug)->first();
+        $category_id = $category->id;
+        $category_name = $category->name;
+
         if($this->sorting == 'date'){
-            $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);
+            $products = Product::where('category_id', $category_id)->orderBy('created_at', 'DESC')->paginate($this->pagesize);
         }
         else if($this->sorting == 'price'){
-            $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);
+            $products = Product::where('category_id', $category_id)->orderBy('regular_price', 'ASC')->paginate($this->pagesize);
         }
         else if($this->sorting == 'price-desc'){
-            $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);
+            $products = Product::where('category_id', $category_id)->orderBy('regular_price', 'DESC')->paginate($this->pagesize);
         }
         else{
-            $products = Product::paginate($this->pagesize);
+            $products = Product::where('category_id', $category_id)->paginate($this->pagesize);
         }
         
         $popular_products = Product::inRandomOrder()->limit(4)->get();
 
         $categories = Category::all();
-
-        return view('livewire.shop-component', [
+        
+        return view('livewire.category-component', [
             'products' => $products,
             'popular_products' => $popular_products,
-            'categories' => $categories
+            'categories' => $categories,
+            'category_name' => $category_name
         ])->layout('layouts.base');
     }
 
