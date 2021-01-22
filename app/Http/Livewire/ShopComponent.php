@@ -9,12 +9,31 @@ use Cart;
 
 class ShopComponent extends Component
 {
-    use WithPagination;
+    public $sorting;
+    public $pagesize;
+
+    public function mount()
+    {
+        $this->sorting = "default";
+        $this->pagesize = 12;
+    }
     
+    use WithPagination;    
     public function render()
     {
-        $products = Product::paginate(12);
-
+        if($this->sorting == 'date'){
+            $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);
+        }
+        else if($this->sorting == 'price'){
+            $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);
+        }
+        else if($this->sorting == 'price-desc'){
+            $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);
+        }
+        else{
+            $products = Product::paginate($this->pagesize);
+        }
+        
         $popular_products = Product::inRandomOrder()->limit(4)->get();
 
         return view('livewire.shop-component', [
@@ -29,5 +48,5 @@ class ShopComponent extends Component
         session()->flash('success_message', 'Item added in Cart');
 
         return redirect()->route('product.cart');
-    }
+    }    
 }
