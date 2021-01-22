@@ -63,6 +63,11 @@ php artisan db:seed
 
 # Agregar componente livewire para detalles de productos
 php artisan make:livewire DetailsComponent
+
+# Agregar hardevine a las dependencias para el carrito de compras
+composer require hardevine/shoppingcart
+# Luego de actualizar el config de app con el carrito de Gloudeman
+php artisan vendor:publish --provider="Gloudeman\ShoppingcartServiceProvider" --tag="config"
 ```
 
 ## Agregar el handle de autenticación a los roles
