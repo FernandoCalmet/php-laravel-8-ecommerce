@@ -25,4 +25,15 @@ class CartComponent extends Component
         $qty = $product->qty - 1;
         Cart::update($rowId, $qty);
     }
+
+    public function destroy($rowId)
+    {
+        Cart::remove($rowId);
+        session()->flash('success_message', 'Item has been removed');
+    }
+
+    public function destroyAll()
+    {
+        Cart::destroy();
+    }
 }
