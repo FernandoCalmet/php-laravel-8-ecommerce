@@ -20,7 +20,7 @@ Este proyecto es una muestra de una solución base de `e-commerce` utilizando `P
 Clonar el repositorio.
 
 ```bash
-gh repo clone FernandoCalmet/PHP-Laravel-8-ECommerce
+gh repo clone FernandoCalmet/php-laravel-8-ecommerce
 ```
 
 ## Comandos utilizados
